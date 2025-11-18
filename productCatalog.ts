@@ -56,7 +56,7 @@ export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReview
                 if(Math.random() > 6){
                     resolve([
                        {
-                        totalSales: 154,266,
+                        totalSales: 154266,
                         unitsSold: 4500,
                         averagePrice: 40,
                         }
