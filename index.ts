@@ -1,18 +1,20 @@
 
 import fetchProductCatalog = require("./productCatalog.js")
 
+// import { ProductCatalog} from "".productCatalog.ts";
+
 import { fetchProductReviews } from "./productReviews.js"
 
 import { fetchSalesReport} from "./salesReport.js"
 
-fetchProductCatalog()
-.then((name:string) => {
-    console.log("This is a", name);
-    return fetchProductReviews
-}
-)
+
 // Use fetchProductCatalog() 
 // to fetch product details and display them.
+fetchProductCatalog().then((Products: ProductCatalog[]) =>{
+    console.log(Products );
+    return fetchProductReviews();
+})
+
 
 // For each product, fetch the reviews using fetchProductReviews(productId).
 
