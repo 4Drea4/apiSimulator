@@ -16,7 +16,7 @@ interface ProductReviews {
 interface SalesReport {
     totalSales: number;
     unitsSold: number;
-    averagePirce: number;
+    averagePrice: number;
 }
     
 export const fetchProductCatalog = (): Promise<{id: 
@@ -46,10 +46,27 @@ export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReview
         } else {
             reject("Failed to fetch reviews for product ID ${productId");
         }
-        
     }, 1500);  
   });
 };
+    export const fetchSalesReport =( SalesReport: any):
+    Promise<SalesReport[]> => {
+        return new Promise((resolve,reject) => {
+            setTimeout(() => {
+                if(Math.random() > 6){
+                    resolve([
+                       {
+                        totalSales: 154,266,
+                        unitsSold: 4500,
+                        averagePrice: 40,
+                        }
+                    ]);
+                }else{
+                    reject("Failed to fetch sales report");
+                }
+            }, 1000);
+        } );
+    };
 
 
 
