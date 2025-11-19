@@ -23,4 +23,8 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
 
   .catch((error) => {
     console.log("Error", error);
-  });
+  })
+
+  .finally(() => {
+    console.log("Everything is cool here");
+    });
