@@ -1,4 +1,4 @@
-//Product Reviews
+import { NetworkError } from "./error.js";
 export const fetchProductReviews = (productId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -11,8 +11,9 @@ export const fetchProductReviews = (productId) => {
                 ]);
             }
             else {
-                reject(`Failed to fetch reviews for product ID ${productId}`);
+                reject(new NetworkError(`Failed to fetch reviews for product ID ${productId}`));
             }
+            ;
         }, 1500);
     });
 };
@@ -26,7 +27,7 @@ export const fetchProductCatalog = () => {
                 ]);
             }
             else {
-                reject("Failed to fetch product catalog");
+                reject(new NetworkError("Failed to fetch product catalog"));
             }
         }, 1000);
     });
@@ -44,8 +45,9 @@ export const fetchSalesReport = () => {
                 ]);
             }
             else {
-                reject("Failed to fetch sales report");
+                reject(new NetworkError(`Failed to fetch Sales Report `));
             }
+            ;
         }, 1000);
     });
 };

@@ -2,14 +2,6 @@ import { fetchProductCatalog, fetchProductReviews, fetchSalesReport } from "./ap
 // import type {productID} from  ".type/apiSimulator.js";
 // Use fetchProductCatalog() to fetch product details & display them.
 //product = {}
-// class Network extends Error {
-//     constructor(message:any. errorCode) {
-//         super(message);
-//         this.name ="NetworkErrors";
-//         this.errorCode = errorCode;
-//     }
-// }
-//keep getting type errors so commenting out until i can get it working
 fetchProductCatalog()
     .then((product) => {
     console.log("Product Catalog:");
@@ -23,8 +15,8 @@ fetchProductCatalog()
     .then((salesReport) => {
     console.log("Sales Report", salesReport);
 })
-    .catch((error) => {
-    console.log("Error", error);
+    .catch((NetworkError) => {
+    console.log("Network Error", NetworkError);
 })
     .finally(() => {
     console.log("Everything is cool here");

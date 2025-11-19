@@ -1,3 +1,6 @@
+import { NetworkError } from "./error.js";
+
+
 //Product Reviews
 
 export interface ProductReviews {
@@ -18,8 +21,9 @@ export const fetchProductReviews = (productId : any): Promise<ProductReviews[]> 
           ]);
 
       } else {
-          reject(`Failed to fetch reviews for product ID ${productId}`);
-      }
+          reject(
+            new NetworkError (`Failed to fetch reviews for product ID ${productId}`),
+   ) };
   }, 1500);  
 });
 };
@@ -45,7 +49,9 @@ setTimeout(() => {
       { id: 2, name: "Headphones", price: 200 },
   ]);
   } else {
-  reject("Failed to fetch product catalog");
+  reject(
+    new NetworkError("Failed to fetch product catalog")
+  );
   }
 }, 1000);
 });
@@ -69,8 +75,9 @@ export const fetchSalesReport =(): Promise<SalesReport[]> =>{
                   }
               ]);
           }else{
-              reject("Failed to fetch sales report");
-          }
+            reject(
+              new NetworkError (`Failed to fetch Sales Report `),
+            ) };
       }, 1000);
   } );
 };
