@@ -37,4 +37,3 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
     console.log("Everything is cool here");
     });
 
-    // throw new NetworkError("Could not connect to the network", 500);
