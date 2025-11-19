@@ -11,7 +11,7 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
     //         this.errorCode = errorCode;
     //     }
     // }
-
+//keep getting type errors so commenting out until i can get it working
     fetchProductCatalog()
   .then((product) => {
     console.log("Product Catalog:");
