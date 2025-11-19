@@ -6,7 +6,7 @@ export interface ProductReviews {
   name: string;
   productId:string | number;
 }
-export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReviews[]> => {
+export const fetchProductReviews = (productId : any): Promise<ProductReviews[]> => {
   return new Promise((resolve, reject) =>{
   setTimeout(() => {
       if (Math.random() < 0.80){
@@ -18,7 +18,7 @@ export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReview
           ]);
 
       } else {
-          reject("Failed to fetch reviews for product ID ${productId");
+          reject(`Failed to fetch reviews for product ID ${productId}`);
       }
   }, 1500);  
 });
@@ -60,7 +60,7 @@ export interface SalesReport {
 export const fetchSalesReport =(): Promise<SalesReport[]> =>{
   return new Promise((resolve,reject) => {
       setTimeout(() => {
-          if(Math.random() > 6){
+          if(Math.random() > .75){
               resolve([
                  {
                   totalSales: 154266,

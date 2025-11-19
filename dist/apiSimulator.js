@@ -1,13 +1,17 @@
-export const fetchProductReviews = (ProductCatalog) => {
+//Product Reviews
+export const fetchProductReviews = (productId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (Math.random() < 0.80) {
                 resolve([
-                    { userName: "Andrea", userReview: "This was so delicious, I am ordering ten more", name: "Waffle Sticks", productId: "1234-AB" },
+                    { userName: "Andrea",
+                        userReview: "This was so delicious, it was incredible omg. When I was walking around hungry unsatisfied by the prices and repetitveness of Dunkin Starbucks Mcdonalds even a huge sign said waffle sticks, I am ordering ten more",
+                        name: "Waffle Sticks",
+                        productId: "1234-AB" },
                 ]);
             }
             else {
-                reject("Failed to fetch reviews for product ID ${productId");
+                reject(`Failed to fetch reviews for product ID ${productId}`);
             }
         }, 1500);
     });
@@ -27,10 +31,10 @@ export const fetchProductCatalog = () => {
         }, 1000);
     });
 };
-export const fetchSalesReport = (SalesReport) => {
+export const fetchSalesReport = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Math.random() > 6) {
+            if (Math.random() > .75) {
                 resolve([
                     {
                         totalSales: 154266,

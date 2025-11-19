@@ -4,7 +4,7 @@ export interface ProductReviews {
     name: string;
     productId: string | number;
 }
-export declare const fetchProductReviews: (ProductCatalog: any) => Promise<ProductReviews[]>;
+export declare const fetchProductReviews: (productId: any) => Promise<ProductReviews[]>;
 export interface ProductCatalog {
     id: number | string;
     name: string;
@@ -20,5 +20,5 @@ export interface SalesReport {
     unitsSold: number;
     averagePrice: number;
 }
-export declare const fetchSalesReport: (SalesReport: any) => Promise<SalesReport[]>;
+export declare const fetchSalesReport: () => Promise<SalesReport[]>;
 //# sourceMappingURL=apiSimulator.d.ts.map
