@@ -57,8 +57,7 @@ export interface SalesReport {
   unitsSold: number;
   averagePrice: number;
 }
-export const fetchSalesReport =( SalesReport: any):
-Promise<SalesReport[]> => {
+export const fetchSalesReport =(): Promise<SalesReport[]> =>{
   return new Promise((resolve,reject) => {
       setTimeout(() => {
           if(Math.random() > 6){

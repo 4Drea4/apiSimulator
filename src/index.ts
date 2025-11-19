@@ -8,7 +8,7 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
   .then((product) => {
     console.log("Product Catalog:");
 
-    const eachProduct = product[0];
+    const eachProduct = product[0]!;
     return fetchProductReviews(eachProduct.id);
   })
 
