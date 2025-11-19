@@ -15,15 +15,20 @@
 -Install the project dependencies, this project uses TypeScript: *npm install typescript --save-dev*
 5. Happy Studying!
 
-<table><tr><td>
 Things I learned:
- How to apply *Promises* to manage multiple asynchronous operations in JavaScript.
-I implemented *Chain Promises* to handle sequential data retrieval and manage dependencies between API calls.<br>Utilize .catch() and .finally() to handle errors and perform cleanup tasks in a *Promise Chain*. <br>Designed custom error classes to improve error identification and debugging.<br> Implemented a retry mechanism to manage failed asynchronous requests, enhancing application resilience. <br>I used error handling strategies in asynchronous workflows.</td></tr></table> 
+How to apply *Promises* to manage multiple asynchronous operations in JavaScript.
+I implemented *Chain Promises* to handle sequential data retrieval and manage dependencies between API calls.<br>Utilize .catch() and .finally() to handle errors and perform cleanup tasks in a *Promise Chain*. <br>Designed custom error classes to improve error identification and debugging.<br> Implemented a retry mechanism to manage failed asynchronous requests, enhancing application resilience. <br>I used error handling strategies in asynchronous workflows.
 
 
-<!-- 
-<table><tr><td>
-</td></tr></table>  -->
+<table>
+  <tr>
+    <td>
+      <strong>References:</strong>
+      <br>
+      <a href="https://javascript.info/promise-error-handling">https://javascript.info/promise-error-handling</a>
+    </td>
+  </tr>
+</table>
 
 
 

@@ -3,6 +3,14 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
 
 // Use fetchProductCatalog() to fetch product details & display them.
 //product = {}
+ 
+    // class Network extends Error {
+    //     constructor(message:any. errorCode) {
+    //         super(message);
+    //         this.name ="NetworkErrors";
+    //         this.errorCode = errorCode;
+    //     }
+    // }
 
     fetchProductCatalog()
   .then((product) => {
@@ -28,3 +36,5 @@ import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./api
   .finally(() => {
     console.log("Everything is cool here");
     });
+
+    // throw new NetworkError("Could not connect to the network", 500);
