@@ -1,3 +1,5 @@
+//Product Reviews
+
 export interface ProductReviews {
   userName: string;
   userReview: string;
@@ -9,7 +11,10 @@ export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReview
   setTimeout(() => {
       if (Math.random() < 0.80){
           resolve([
-          { userName: "Andrea" , userReview: "This was so delicious, I am ordering ten more", name: "Waffle Sticks" , productId: "1234-AB"},
+          { userName: "Andrea" ,
+            userReview: "This was so delicious, it was incredible omg. When I was walking around hungry unsatisfied by the prices and repetitveness of Dunkin Starbucks Mcdonalds even a huge sign said waffle sticks, I am ordering ten more",
+            name: "Waffle Sticks" , 
+            productId: "1234-AB"},
           ]);
 
       } else {
@@ -19,7 +24,7 @@ export const fetchProductReviews = (ProductCatalog : any): Promise<ProductReview
 });
 };
 
-
+// Product Catalog
 
 export interface ProductCatalog{
   id: number | string;
@@ -28,11 +33,10 @@ export interface ProductCatalog{
 }
 
 
-
-
-
-export const fetchProductCatalog = (): Promise<{id: 
-number; name: string; price: number }[]> => {
+export const fetchProductCatalog = (): Promise<{
+  id: number;
+  name: string;
+  price: number }[]> => {
 return new Promise((resolve, reject) => {
 setTimeout(() => {
   if (Math.random() < 0.8) {
@@ -47,6 +51,7 @@ setTimeout(() => {
 });
 };
 
+//Sales Report
 export interface SalesReport {
   totalSales: number;
   unitsSold: number;

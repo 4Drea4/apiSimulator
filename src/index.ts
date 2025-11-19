@@ -1,11 +1,26 @@
 import { fetchProductCatalog, fetchProductReviews,fetchSalesReport } from "./apiSimulator.js";
+// import type {productID} from  ".type/apiSimulator.js";
 
-// Use fetchProductCatalog() 
-// to fetch product details and display them.
-// 
+// Use fetchProductCatalog() to fetch product details & display them.
+//product = {}
 
+    fetchProductCatalog()
+  .then((product) => {
+    console.log("Product Catalog:");
 
+    const eachProduct = product[0];
+    return fetchProductReviews(eachProduct.id);
+  })
 
-// For each product, fetch the reviews using fetchProductReviews(productId).
+  .then((reviews) => {
+    console.log("Product Reviews", reviews);
+    return fetchSalesReport();
+  })
 
-// After fetching products and reviews, retrieve the sales report using fetchSalesReport()
+  .then((salesReport) => {
+    console.log("Sales Report", salesReport);
+  })
+
+  .catch((error) => {
+    console.log("Error", error);
+  });
